@@ -15,10 +15,10 @@
     <div class="header-container">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
                     <div  class="logo"><a href="./" title="Website Title"></a></div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8">
                     <div class="top-nav">
                         <ul>
                             <li>
@@ -45,8 +45,8 @@
     <!-- Middile Container : Start : here -->
     <div class="main-container">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="row row-10">
+                <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
                     <div class="history-movie">
                         <div class="history-head">History of Movie</div>
                         <ul>
@@ -55,7 +55,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="search-section">
                         <div class="search">
                             <input type="text" placeholder="Find"><i class="fas fa-search"></i>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-10">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <div class="middle-container">
                         <div class="tabs-ui-container">
@@ -77,7 +77,7 @@
                                 <div class="tab-content-area tabs-ui-container">
                                     <!-- Tabs Content 1 : Start : Here -->
                                     <div class="row">
-                                        <div class="col-xl-8 col-lg-7 col-md-7 col-sm-12">
+                                        <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
                                             
                                             <ul class="tabs innertab-list">
                                                 <li class="active">Most Recent</li>
@@ -89,14 +89,15 @@
                                                         <img src="images/female-thumb.jpg" alt="" title="">
                                                         <div class="post-body">
                                                             <div class="post-area">
-                                                                <textarea>Type here</textarea>
+                                                                <textarea id="post-title" placeholder="Type here"></textarea>
                                                             </div>
                                                             <div class="post-footer">
                                                                 
-                                                                <div class="fll">  
+                                                                <label class="fileupload fll">  
                                                                     <i class="fas fa-paperclip"></i> Upload
-                                                                </div>   
-                                                                <button class="flr btn">Post</button>
+                                                                    <input class="hidden" type="file" />
+                                                                </label>   
+                                                                <button class="flr btn" id="post">Post</button>
                                                                 
                                                             </div>
                                                         </div>
@@ -155,7 +156,7 @@
                                                             </div>
                                                             <div class="boosted-footer">
                                                                 <div class="row">
-                                                                    <div class="col">
+                                                                    <div class="col col-sm-8">
                                                                         <div class="social-share-zoom">
                                                                             <ul>
                                                                                 <li>
@@ -170,7 +171,7 @@
                                                                             </ul>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col text-right">
+                                                                    <div class="col col-sm-4 text-right">
                                                                         <div class="social-share-zoom">
                                                                             <ul>
                                                                                 <li>
@@ -216,7 +217,7 @@
                                             
                                             
                                         </div>
-                                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-12">
+                                        <div class="col-xl-4 col-lg-5 col-md-12 col-sm-12">
 
                                             <div class="post-section">
                                                 <div class="top-header">
@@ -228,10 +229,10 @@
                                                         <div class="row">
                                                             <div class="col">
                                                                 <div class="cal-date">10</div>
-                                                                <div class="cal-time">Wednesday, 10 April 2013</div>
+                                                                <div class="cal-time">Wed, <span class="day">10</span> April 2013</div>
                                                             </div>
                                                             <div class="col">
-                                                                <table>
+                                                                <table class="event-calender">
                                                                     <thead>
                                                                         <tr>
                                                                             <th>Mo</th>
@@ -296,7 +297,8 @@
                                                     </div>
                                                 
                                                     <div class="post-header">
-                                                        <strong>Upcoming Events - Submission</strong> <strong class="flr">Deadline</strong>
+                                                        <strong>Upcoming Events - Submission</strong> 
+                                                        <strong>Deadline</strong>
                                                     </div>
                                                     <div class="post-area">
                                                         <div class="posted-events">
@@ -306,7 +308,8 @@
                                                     </div>
                                                 
                                                     <div class="post-header">
-                                                        <strong>Upcoming Events - Exam</strong> <strong class="flr">Time</strong>
+                                                        <strong>Upcoming Events - Exam</strong> 
+                                                        <strong>Time</strong>
                                                     </div>
                                                     <div class="post-area">
                                                         <div class="posted-events">

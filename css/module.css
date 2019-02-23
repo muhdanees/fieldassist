@@ -13,10 +13,6 @@
 
 
 /* Reusable classes */
-.active { 
-	color: var(--black);
-    font-weight: bolder;
-}
 .fll {
 	float: left;
 }
@@ -43,12 +39,20 @@
     min-height: 26px;
     padding: 1px 10px;
     cursor: pointer;
-    min-width: 60px;
-    background-color: var(--primary);
+	min-width: 60px;
+	background-color: var(--gray);
     color: var(--white);
-    border-radius: 4px;
+	border-radius: 4px;
 }
-
+.btn-primary {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#a2d486), to(#78b057));
+	background-image: -webkit-linear-gradient(#a2d486, #78b057);
+	background-image: -o-linear-gradient(#a2d486, #78b057);
+	background-image: linear-gradient(#a2d486, #78b057);
+}
+.hidden {
+	display: none;
+}
 
 /* Top navigation of the website */
 .top-nav {
@@ -112,7 +116,7 @@
     margin: auto;
     margin-right: 0;
     padding: 5px 10px;
-    width: 300px;
+    /* width: 300px; */
     box-shadow: 0px 1px 3px var(--gray) inset;
     background-color: var(--white);
     display: flex;
@@ -141,11 +145,12 @@
 .post-section {
 	position: relative;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 .top-header {
 	text-align: right;
 	color: var(--primary);
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 	font-size: 1rem;
 	color: var(--primary);
 }
@@ -187,21 +192,46 @@
 }
 .post-area table {
 	text-align: right;
+	width: 100%;
+}
+.post-area table thead th {
+	padding-bottom: 3px;
+}
+.post-area table tbody td {
+	border: 1px solid var(--alabaster);
+}
+.event-calender tbody td {
+	cursor: pointer;
+	color: var(--medium-dark);
+	padding: 2px;
+}
+.event-calender tbody td.active { 
+	color: var(--black);
+    font-weight: bolder;
 }
 .cal-date {
 	font-size: 6.8rem;
 	line-height: 100%;
+	text-align: center;
 }
-.cal-time { font-size: .7rem;  }
+.cal-time { margin-bottom: 10px; text-align: center; }
 .post-footer, .boosted-footer {
 	padding: 10px;
 	border-top: 1px solid var(--light-gray);
 	background-color: var(--alabaster);
 }
+.boosted-footer {
+	padding: 5px 10px;
+}
 .post-footer::after, .post-footer::before {
 	display: block;
 	clear: both;
 	content: '';
+}
+.fileupload {
+	cursor: pointer;
+	padding-right: 10px;
+	margin-bottom: 0;
 }
 .post-section > img {
 	position: absolute;
@@ -229,7 +259,7 @@
 
 /* Upload/Post Section Functions */
 .social-share-zoom ul { list-style: none; padding: 0; margin: 0; }
-.social-share-zoom ul li { display: inline-block; margin-right: 15px; cursor: pointer;}
+.social-share-zoom ul li { display: inline-block; margin: 4px; margin-right: 15px; cursor: pointer;}
 .social-share-zoom ul li:last-child {
 	margin-right: 0;
 }
@@ -237,7 +267,6 @@
 
 
 /* Write Comments Section Start */
-.write-comments-sec {}
 .write-comments-sec img {
 	float: left;
 	max-width: 35px;
@@ -264,7 +293,7 @@
 .write-comments input {
 	border: none;
 	padding: 6px 10px;
-	width: 95%;
+	width: calc(100% - 24px);
 }
 .write-comments input:focus {
 	outline: none;
@@ -275,7 +304,7 @@
 }
 .write-comments-text {
 	min-height: 35px;
-	line-height: normal;
+	line-height: 140%;
 }
 .boostedtime span {
 	margin: 0 5px;
@@ -292,6 +321,18 @@
 	border-bottom: 1px solid var(--light-gray);
 	background-color: var(--alabaster);
 }
+.post-header strong {
+	display: inline-block;
+}
+.post-header strong:last-child {
+	text-align: right;
+	float: right;
+}
+.post-header:after, .post-header:before {
+	display: block;
+	clear: both;
+	content: '';
+}
 
 /* Upcoming Events List */
 .posted-events ul { list-style: none; padding: 0; margin: 0; }
@@ -299,6 +340,7 @@
 	margin-bottom: 10px;
 	font-size: .75rem;
 }
+.posted-events ul li strong { margin-bottom: 5px; display: block; }
 .posted-events ul li:last-child {
 	margin-bottom: 0;
 }
@@ -318,4 +360,55 @@
 }
 
 
-
+@media (max-width: 575px) {
+	.logo {
+		margin: auto;
+		margin-bottom: 10px;
+	}
+	.top-nav ul {
+		text-align: center;
+	}
+	.search-section {
+		margin: 0 auto;
+		padding-top: 0;
+	}
+	.search {
+		margin: 0 auto 0 0;
+	}
+}
+@media (max-width: 767px) {
+	.search-section {
+		padding-top: 0;
+		margin: 0 auto;
+	}
+	.search {
+		width: 100%;
+	}
+	.tabs-ui {
+		left: 0;
+		top: -100px;
+		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.tabs-ui li {
+		width: 100%;
+	}
+	.tab-content {
+		margin-top: 0px;
+	}
+	.post-container {
+		padding-left: 0;
+	}
+	.post-section > img {
+		position: relative;
+		margin-bottom: 10px;
+	}
+	.post-header strong:last-child {
+		display: block;
+	}
+	.middle-container {
+		margin-top: 70px;
+	}
+}

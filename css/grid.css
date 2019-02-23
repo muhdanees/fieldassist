@@ -1,4 +1,7 @@
-
+/* Custom Row Spacing Start here */
+.row-10 {margin-left: -10px; margin-right: -10px; }
+.row-10 [class^="col-"] {padding-left: 10px; padding-right: 10px;}
+/* Custom Row Spacing End */
 .container {
   width: 100%;
   padding-right: 15px;
@@ -16,6 +19,7 @@
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+    padding-left: 110px;
   }
 }
 

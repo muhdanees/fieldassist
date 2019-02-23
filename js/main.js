@@ -21,6 +21,13 @@ $(document).ready(function () {
             .show();
     });
 
+    $(".event-calender tbody td").on("click", function(){
+        $(".event-calender tbody td").removeClass("active");
+        $(this).addClass("active");
+        $(".cal-date").text($(this).text());
+        $(".cal-time .day").text($(this).text());
+    });
+
     function rowHTML(data) {
         return '<div class="row">' +
             '<div class="col">' + data.name + '</div>' +
@@ -69,4 +76,12 @@ $(document).ready(function () {
         $('.list-resource').append(resources.join(''))
     });
 
+    //btn-primary
+    $("#post-title").on('keyup',function(){
+        if($(this).val().length >= 1) {
+            $('#post').addClass('btn-primary');
+        } else {
+            $('#post').removeClass('btn-primary');
+        }
+    });
 });
