@@ -22,10 +22,13 @@ $(document).ready(function () {
     });
 
     $(".event-calender tbody td").on("click", function(){
-        $(".event-calender tbody td").removeClass("active");
-        $(this).addClass("active");
-        $(".cal-date").text($(this).text());
-        $(".cal-time .day").text($(this).text());
+        if($(this).text().length){
+            $(".event-calender tbody td").removeClass("active");
+            $(this).addClass("active");
+            $(".cal-date").text($(this).text());
+            $(".cal-time .day").text($(this).text());
+        }
+        
     });
 
     function rowHTML(data) {
