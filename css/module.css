@@ -359,7 +359,7 @@
 	content: "";
 }
 
-
+/* Responsive @Media Query Start Here */
 @media (max-width: 575px) {
 	.logo {
 		margin: auto;
