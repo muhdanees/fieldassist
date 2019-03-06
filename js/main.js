@@ -87,4 +87,13 @@ $(document).ready(function () {
             $('#post').removeClass('btn-primary');
         }
     });
+
+    $(".btn-comments").on("click", function(){
+        let inputVal = $(this).prev(":input").val();
+        let inputValClear = $(this).prev(":input").val("");
+        let divappend = "<div class='addpendtext' >";
+        console.log("test");
+        $(this).parents(".post-footer").prepend(divappend + inputVal);
+    });
+
 });

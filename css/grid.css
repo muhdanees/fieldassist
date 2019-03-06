@@ -18,20 +18,23 @@
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    /* max-width: 720px; */
+    max-width: 100%;
     padding-left: 110px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    /* max-width: 960px; */
+    max-width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    /* max-width: 1170px; */
+    min-width: 100%;
   }
 }
 
